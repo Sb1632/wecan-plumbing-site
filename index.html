@@ -1,29 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WECAN PLUMBINGINC</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 50px;
-      }
-      h1 {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>WECAN PLUMBINGINC</h1>
-    <p>Serving since 2016</p>
-    <p>Phone: 778-919-9209</p>
-    <p>Email: wecanplumbing@gmail.com</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WECAN PLUMBING & GAS | Vancouver Licensed Specialists</title>
+    <meta name="description" content="24/7 Plumbing & Gas Services in Vancouver. Licensed & Insured. Emergency Response 1-Hour Guarantee.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 燃气紧急通知栏 -->
+    <div class="gas-alert">
+        <div class="container">
+            <i class="fas fa-exclamation-triangle"></i> 
+            <span>GAS LEAK EMERGENCY? </span>
+            <a href="tel:7789199209">CALL NOW: 778-919-9209</a>
+            <small>Do not use electrical switches or open flames</small>
+        </div>
+    </div>
+
+    <!-- 主导航 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">WECAN <span>PLUMBING & GAS</span></a>
+            <div class="nav-menu">
+                <a href="#plumbing">Plumbing</a>
+                <a href="#gas">Gas Services</a>
+                <a href="#emergency">24/7 Emergency</a>
+                <a href="#contact" class="nav-cta">Free Inspection</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 双服务英雄横幅 -->
+    <header class="hero">
+        <div class="container">
+            <h1>Vancouver's <span>Plumbing & Gas</span> Experts</h1>
+            <div class="service-badges">
+                <div class="badge plumbing-badge">
+                    <i class="fas fa-faucet"></i> Licensed Plumber
+                </div>
+                <div class="badge gas-badge">
+                    <i class="fas fa-fire"></i> Certified Gas Fitter
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Plumbing服务区 -->
+    <section id="plumbing" class="services-section">
+        <div class="container">
+            <h2><i class="fas fa-tint"></i> Plumbing Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Plumbing</h3>
+                    <ul>
+                        <li>Pipe Repair/Replacement</li>
+                        <li>Drain Cleaning</li>
+                        <li>Water Heater Installation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial Plumbing</h3>
+                    <ul>
+                        <li>Backflow Prevention</li>
+                        <li>Grease Trap Maintenance</li>
+                        <li>High-Pressure Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gas服务区 -->
+    <section id="gas" class="services-section gas-section">
+        <div class="container">
+            <h2><i class="fas fa-fire"></i> Gas Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Gas Line Installation</h3>
+                    <ul>
+                        <li>New Construction</li>
+                        <li>BBQ Hookups</li>
+                        <li>Fireplace Conversions</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Gas Appliance Services</h3>
+                    <ul>
+                        <li>Furnace Repair</li>
+                        <li>Water Heater Service</li>
+                        <li>Commercial Kitchen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 双服务对比表 -->
+    <section class="comparison">
+        <div class="container">
+            <h2>Our Service Coverage</h2>
+            <table>
+                <tr>
+                    <th>Service Type</th>
+                    <th>Plumbing</th>
+                    <th>Gas</th>
+                </tr>
+                <tr>
+                    <td>Emergency Response</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Warranty</td>
+                    <td>5 Years</td>
+                    <td>10 Years</td>
+                </tr>
+                <tr>
+                    <td>License Required</td>
+                    <td>Red Seal</td>
+                    <td>Gas Ticket</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">WECAN PLUMBING & GAS INC</div>
+            <div class="footer-contact">
+                <a href="tel:7789199209"><i class="fas fa-phone"></i> 778-919-9209</a>
+                <p><i class="fas fa-map-marker-alt"></i> Serving Greater Vancouver</p>
+            </div>
+            <div class="footer-licenses">
+                <img src="images/gas-safe-logo.png" alt="Gas Safe Certified">
+                <img src="images/bca-logo.png" alt="BC Plumbing License">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

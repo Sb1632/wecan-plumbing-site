@@ -1,0 +1,63 @@
+/* 燃气警报 */
+.gas-alert {
+    background: #d32f2f;
+    color: white;
+    padding: 12px 0;
+    font-weight: bold;
+}
+.gas-alert a {
+    color: white;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+/* 双服务标识 */
+.service-badges {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.badge {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+.plumbing-badge {
+    background: #005f87;
+    color: white;
+}
+.gas-badge {
+    background: #ff6b35;
+    color: white;
+}
+
+/* 燃气服务专区 */
+.gas-section {
+    background: #fff8f0;
+    border-top: 3px solid #ff6b35;
+    border-bottom: 3px solid #ff6b35;
+}
+
+/* 对比表格 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+th {
+    background: #005f87;
+    color: white;
+    padding: 15px;
+}
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* 资质图标 */
+.footer-licenses img {
+    height: 50px;
+    margin: 0 15px;
+}
