@@ -3,144 +3,509 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WECAN PLUMBING & GAS | Vancouver Licensed Specialists</title>
-    <meta name="description" content="24/7 Plumbing & Gas Services in Vancouver. Licensed & Insured. Emergency Response 1-Hour Guarantee.">
+    <title>WECAN PLUMBING INC | Plumbing & Gas Services in Vancouver</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary: #0a4e9b;
+            --secondary: #ff6b00;
+            --light: #f8f9fa;
+            --dark: #333;
+            --white: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 顶部通知栏 */
+        .top-bar {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .top-bar a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        /* 导航栏 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background-color: var(--secondary);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600881336149-c8b8f5f5b4e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e05a00;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* 服务区域 */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-content ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+        
+        .service-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* 关于我们 */
+        .about {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 15px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .footer-links h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- 燃气紧急通知栏 -->
-    <div class="gas-alert">
+    <!-- 顶部通知栏 -->
+    <div class="top-bar">
         <div class="container">
-            <i class="fas fa-exclamation-triangle"></i> 
-            <span>GAS LEAK EMERGENCY? </span>
-            <a href="tel:7789199209">CALL NOW: 778-919-9209</a>
-            <small>Do not use electrical switches or open flames</small>
+            <span><i class="fas fa-phone-alt"></i> 24/7 Emergency Service</span>
+            <a href="tel:7789199209">Call Now: 778-919-9209</a>
         </div>
     </div>
-
-    <!-- 主导航 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">WECAN <span>PLUMBING & GAS</span></a>
-            <div class="nav-menu">
-                <a href="#plumbing">Plumbing</a>
-                <a href="#gas">Gas Services</a>
-                <a href="#emergency">24/7 Emergency</a>
-                <a href="#contact" class="nav-cta">Free Inspection</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 双服务英雄横幅 -->
-    <header class="hero">
-        <div class="container">
-            <h1>Vancouver's <span>Plumbing & Gas</span> Experts</h1>
-            <div class="service-badges">
-                <div class="badge plumbing-badge">
-                    <i class="fas fa-faucet"></i> Licensed Plumber
-                </div>
-                <div class="badge gas-badge">
-                    <i class="fas fa-fire"></i> Certified Gas Fitter
-                </div>
-            </div>
+    
+    <!-- 导航栏 -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">WECAN <span>PLUMBING</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="nav-cta">Free Estimate</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <!-- Plumbing服务区 -->
-    <section id="plumbing" class="services-section">
+    
+    <!-- 英雄区域 -->
+    <section class="hero">
         <div class="container">
-            <h2><i class="fas fa-tint"></i> Plumbing Services</h2>
+            <h1>Professional Plumbing & Gas Services in Vancouver</h1>
+            <p>Licensed, insured, and available 24/7 for all your plumbing and gas needs</p>
+            <div class="hero-btns">
+                <a href="tel:7789199209" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Now</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get a Quote</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 服务区域 -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive plumbing and gas solutions for residential and commercial properties</p>
+            </div>
+            
             <div class="services-grid">
+                <!-- 服务1 -->
                 <div class="service-card">
-                    <h3>Residential Plumbing</h3>
-                    <ul>
-                        <li>Pipe Repair/Replacement</li>
-                        <li>Drain Cleaning</li>
-                        <li>Water Heater Installation</li>
-                    </ul>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600596541495-717893a3a1c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Plumbing Services</h3>
+                        <ul>
+                            <li>Emergency pipe repairs</li>
+                            <li>Drain cleaning & unclogging</li>
+                            <li>Water heater installation</li>
+                            <li>Fixture replacement</li>
+                            <li>Sewer line services</li>
+                        </ul>
+                    </div>
                 </div>
+                
+                <!-- 服务2 -->
                 <div class="service-card">
-                    <h3>Commercial Plumbing</h3>
-                    <ul>
-                        <li>Backflow Prevention</li>
-                        <li>Grease Trap Maintenance</li>
-                        <li>High-Pressure Systems</li>
-                    </ul>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Gas Services</h3>
+                        <ul>
+                            <li>Gas line installation</li>
+                            <li>Gas leak detection</li>
+                            <li>Appliance hookups</li>
+                            <li>Gas fireplace services</li>
+                            <li>Commercial gas systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 服务3 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581093450022-4c438f57963f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Commercial Services</h3>
+                        <ul>
+                            <li>Restaurant plumbing</li>
+                            <li>Strata building maintenance</li>
+                            <li>Backflow prevention</li>
+                            <li>Grease trap installation</li>
+                            <li>High-volume systems</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Gas服务区 -->
-    <section id="gas" class="services-section gas-section">
-        <div class="container">
-            <h2><i class="fas fa-fire"></i> Gas Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Gas Line Installation</h3>
-                    <ul>
-                        <li>New Construction</li>
-                        <li>BBQ Hookups</li>
-                        <li>Fireplace Conversions</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Gas Appliance Services</h3>
-                    <ul>
-                        <li>Furnace Repair</li>
-                        <li>Water Heater Service</li>
-                        <li>Commercial Kitchen</li>
-                    </ul>
-                </div>
+    
+    <!-- 关于我们 -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="WECAN PLUMBING Team">
+            </div>
+            <div class="about-content">
+                <h2>About WECAN PLUMBING INC</h2>
+                <p>With over 15 years of experience serving the Vancouver area, WECAN PLUMBING INC is your trusted partner for all plumbing and gas services. Our licensed technicians are available 24/7 to handle emergencies and routine maintenance alike.</p>
+                <p>We pride ourselves on delivering exceptional service with transparent pricing and a 100% satisfaction guarantee. Whether you need a simple faucet repair or a complete gas line installation, we have the expertise to get the job done right.</p>
+                <p>All our work is fully licensed and insured, giving you peace of mind with every service call.</p>
             </div>
         </div>
     </section>
-
-    <!-- 双服务对比表 -->
-    <section class="comparison">
-        <div class="container">
-            <h2>Our Service Coverage</h2>
-            <table>
-                <tr>
-                    <th>Service Type</th>
-                    <th>Plumbing</th>
-                    <th>Gas</th>
-                </tr>
-                <tr>
-                    <td>Emergency Response</td>
-                    <td><i class="fas fa-check"></i></td>
-                    <td><i class="fas fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>Warranty</td>
-                    <td>5 Years</td>
-                    <td>10 Years</td>
-                </tr>
-                <tr>
-                    <td>License Required</td>
-                    <td>Red Seal</td>
-                    <td>Gas Ticket</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
+    
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer id="contact">
         <div class="container">
-            <div class="footer-logo">WECAN PLUMBING & GAS INC</div>
-            <div class="footer-contact">
-                <a href="tel:7789199209"><i class="fas fa-phone"></i> 778-919-9209</a>
-                <p><i class="fas fa-map-marker-alt"></i> Serving Greater Vancouver</p>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">WECAN <span>PLUMBING</span></div>
+                    <p>Your trusted plumbing and gas service provider in Vancouver and surrounding areas.</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone-alt"></i> 778-919-9209</p>
+                    <p><i class="fas fa-envelope"></i> info@wecanplumbing.ca</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Serving Greater Vancouver</p>
+                    <p><i class="fas fa-clock"></i> 24/7 Emergency Service</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Emergency Plumbing</a></li>
+                        <li><a href="#">Gas Line Repair</a></li>
+                        <li><a href="#">Drain Cleaning</a></li>
+                        <li><a href="#">Water Heaters</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-licenses">
-                <img src="images/gas-safe-logo.png" alt="Gas Safe Certified">
-                <img src="images/bca-logo.png" alt="BC Plumbing License">
+            
+            <div class="copyright">
+                <p>&copy; 2023 WECAN PLUMBING INC. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
