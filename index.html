@@ -6,10 +6,11 @@
     <title>WECAN PLUMBING INC | Plumbing & Gas Services in Vancouver</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* 全局样式 */
+        /* 全局样式 - 淡蓝色主题 */
         :root {
             --primary: #0a4e9b;
             --secondary: #ff6b00;
+            --light-bg: #e6f7ff;  /* 淡蓝色背景 */
             --light: #f8f9fa;
             --dark: #333;
             --white: #fff;
@@ -25,6 +26,7 @@
             font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.6;
             color: var(--dark);
+            background-color: var(--light-bg);  /* 整个页面淡蓝背景 */
         }
         
         .container {
@@ -105,7 +107,7 @@
         
         /* 英雄区域 */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600881336149-c8b8f5f5b4e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -163,6 +165,7 @@
         /* 服务区域 */
         .services {
             padding: 80px 0;
+            background-color: var(--white);  /* 白色背景突出内容 */
         }
         
         .section-title {
@@ -188,10 +191,12 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            border: 1px solid #d1e7ff;  /* 淡蓝色边框 */
         }
         
         .service-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
         .service-img {
@@ -220,7 +225,7 @@
         
         /* 关于我们 */
         .about {
-            background-color: var(--light);
+            background-color: var(--light-bg);  /* 淡蓝色背景 */
             padding: 80px 0;
         }
         
@@ -380,7 +385,7 @@
         </div>
     </header>
     
-    <!-- 英雄区域 -->
+    <!-- 英雄区域 - 铜管图片 -->
     <section class="hero">
         <div class="container">
             <h1>Professional Plumbing & Gas Services in Vancouver</h1>
@@ -401,47 +406,47 @@
             </div>
             
             <div class="services-grid">
-                <!-- 服务1 -->
+                <!-- 服务1 - 铜管图片 -->
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600596541495-717893a3a1c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752227-09d5f9c5b9c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
                     <div class="service-content">
-                        <h3>Plumbing Services</h3>
+                        <h3>Copper Pipe Services</h3>
                         <ul>
-                            <li>Emergency pipe repairs</li>
-                            <li>Drain cleaning & unclogging</li>
-                            <li>Water heater installation</li>
-                            <li>Fixture replacement</li>
-                            <li>Sewer line services</li>
+                            <li>Copper pipe installation</li>
+                            <li>Corrosion repair</li>
+                            <li>Repiping solutions</li>
+                            <li>Commercial systems</li>
+                            <li>Lifetime warranty</li>
                         </ul>
                     </div>
                 </div>
                 
-                <!-- 服务2 -->
+                <!-- 服务2 - PEX管图片 -->
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>PEX Plumbing</h3>
+                        <ul>
+                            <li>PEX pipe installation</li>
+                            <li>Manifold systems</li>
+                            <li>Radiant heating</li>
+                            <li>Freeze-resistant</li>
+                            <li>Cost-effective</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 服务3 - 燃气服务图片 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752145-9f0b35d3eff1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
                     <div class="service-content">
                         <h3>Gas Services</h3>
                         <ul>
                             <li>Gas line installation</li>
-                            <li>Gas leak detection</li>
+                            <li>Leak detection</li>
                             <li>Appliance hookups</li>
-                            <li>Gas fireplace services</li>
-                            <li>Commercial gas systems</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- 服务3 -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581093450022-4c438f57963f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Commercial Services</h3>
-                        <ul>
-                            <li>Restaurant plumbing</li>
-                            <li>Strata building maintenance</li>
-                            <li>Backflow prevention</li>
-                            <li>Grease trap installation</li>
-                            <li>High-volume systems</li>
+                            <li>Safety inspections</li>
+                            <li>Emergency repairs</li>
                         </ul>
                     </div>
                 </div>
@@ -453,13 +458,13 @@
     <section class="about" id="about">
         <div class="container about-container">
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="WECAN PLUMBING Team">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Copper Pipe Installation">
             </div>
             <div class="about-content">
                 <h2>About WECAN PLUMBING INC</h2>
-                <p>With over 15 years of experience serving the Vancouver area, WECAN PLUMBING INC is your trusted partner for all plumbing and gas services. Our licensed technicians are available 24/7 to handle emergencies and routine maintenance alike.</p>
-                <p>We pride ourselves on delivering exceptional service with transparent pricing and a 100% satisfaction guarantee. Whether you need a simple faucet repair or a complete gas line installation, we have the expertise to get the job done right.</p>
-                <p>All our work is fully licensed and insured, giving you peace of mind with every service call.</p>
+                <p>Specializing in both traditional copper piping and modern PEX systems, WECAN PLUMBING INC brings over 15 years of expertise to every project. Our certified technicians are trained in the latest piping technologies and gas fitting standards.</p>
+                <p>We serve both residential and commercial clients throughout Vancouver, offering 24/7 emergency services for plumbing and gas systems. All our work is fully licensed, insured, and backed by industry-leading warranties.</p>
+                <p>From copper repiping to PEX manifold installations and gas line repairs, we provide comprehensive solutions tailored to your specific needs.</p>
             </div>
         </div>
     </section>
@@ -494,10 +499,10 @@
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Emergency Plumbing</a></li>
+                        <li><a href="#">Copper Piping</a></li>
+                        <li><a href="#">PEX Plumbing</a></li>
                         <li><a href="#">Gas Line Repair</a></li>
-                        <li><a href="#">Drain Cleaning</a></li>
-                        <li><a href="#">Water Heaters</a></li>
+                        <li><a href="#">Emergency Services</a></li>
                     </ul>
                 </div>
             </div>
